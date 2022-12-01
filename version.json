@@ -1,6 +1,12 @@
 {
     "firmware": [
         {
+            "software": "v0.1.4",
+            "hardware": [
+                "v1.0"
+            ]
+        },
+        {
             "software": "v0.1.2",
             "hardware": [
                 "v1.0"
