@@ -44,6 +44,7 @@ function BTConnect() {
     optionalServices: [otaServiceUuid]
   })
     .then(device => {
+      device.addEventListener('gattserverdisconnected', onDisconnected);
       return device.gatt.connect()
     })
     .then(server => server.getPrimaryService(otaServiceUuid))
@@ -64,7 +65,7 @@ function BTConnect() {
  */
 function onDisconnected(event) {
   Popup.create({
-    content: esp32Device.name + ' is disconnected, would you like to reconnect?',
+    content: 'ESP is disconnected, would you like to reconnect?',
     buttons: {
       left: [{
         text: 'Yes',
