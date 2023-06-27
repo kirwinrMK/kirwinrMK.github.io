@@ -1,4 +1,0 @@
-key,type,encoding,value
-HW_INFO,namespace,,
-HW_MAJOR,data,u8,1
-HW_MINOR,data,u8,0
